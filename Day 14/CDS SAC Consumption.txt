@@ -37,37 +37,3 @@ define view ZJAN_C_SALES_SAC as select from SEPM_I_SalesOrderItem_E {
 
 
 
-@AbapCatalog.sqlViewName: 'ZJANSECURE'
-@AbapCatalog.compiler.compareFilter: true
-@AbapCatalog.preserveKey: true
-@AccessControl.authorizationCheck: #CHECK
-@EndUserText.label: 'Business Partners'
-define view ZJAN_I_SECURE_BUPA as select from ZJAN_P_BUPA as BP
-association[0..1] to snwd_ad as _Address on
-BP.AddressKey = _Address.node_key
-{
-    //BP
-    key BPKey,
-    BPRole,
-    EmailAddress,
-    AddressKey,
-    BPId,
-    CompanyName,
-    _Address.country as Country
-}
-
-
-@EndUserText.label: 'BUPA DCL'
-@MappingRole: true
-define role ZJAN_I_SECURE_BUPA {
-    grant 
-        select
-            on
-                ZJAN_I_SECURE_BUPA
-                    where
-                        (Country) = aspect pfcg_auth('ZBUPA', 
-                        'ZJAN_CTRY',  
-                        ACTVT = '03');
-                        
-}
-
