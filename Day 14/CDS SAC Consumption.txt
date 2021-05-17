@@ -1,0 +1,73 @@
+@AbapCatalog.sqlViewName: 'ZJANSALESSAC'
+@AbapCatalog.compiler.compareFilter: true
+@AbapCatalog.preserveKey: true
+@AccessControl.authorizationCheck: #CHECK
+@EndUserText.label: 'sac Consumption view'
+@VDM.viewType: #CONSUMPTION
+@Analytics.dataCategory: #CUBE
+@Analytics.dataExtraction.enabled: true
+@OData.publish: true
+define view ZJAN_C_SALES_SAC as select from SEPM_I_SalesOrderItem_E {
+    //SEPM_I_SalesOrderItem_E
+    key SalesOrder as OrderId,
+    key SalesOrderItem as ItemId,
+    _SalesOrder._Customer.CompanyName as CompanyName,
+    Product,
+    @Semantics.currencyCode: true
+    TransactionCurrency,
+    @DefaultAggregation: #SUM
+    @Semantics.amount.currencyCode: 'TransactionCurrency'
+    GrossAmountInTransacCurrency as GrossAmount,
+    @DefaultAggregation: #SUM
+    @Semantics.amount.currencyCode: 'TransactionCurrency'
+    NetAmountInTransactionCurrency as NetAmount,
+    @DefaultAggregation: #SUM
+    @Semantics.amount.currencyCode: 'TransactionCurrency'
+    TaxAmountInTransactionCurrency as TaxAmount,
+    @DefaultAggregation: #SUM
+    @Semantics.amount.currencyCode: 'TransactionCurrency'
+    currency_conversion( amount => GrossAmountInTransacCurrency, 
+    source_currency => TransactionCurrency, 
+    target_currency => cast('EUR' as abap.cuky), 
+    exchange_rate_date => cast('20210123' as abap.dats) )
+    as ConvertedAmount,
+    ProductAvailabilityStatus as Status,
+    _Product._Text.ProductDescription as ProductName    
+}
+
+
+
+@AbapCatalog.sqlViewName: 'ZJANSECURE'
+@AbapCatalog.compiler.compareFilter: true
+@AbapCatalog.preserveKey: true
+@AccessControl.authorizationCheck: #CHECK
+@EndUserText.label: 'Business Partners'
+define view ZJAN_I_SECURE_BUPA as select from ZJAN_P_BUPA as BP
+association[0..1] to snwd_ad as _Address on
+BP.AddressKey = _Address.node_key
+{
+    //BP
+    key BPKey,
+    BPRole,
+    EmailAddress,
+    AddressKey,
+    BPId,
+    CompanyName,
+    _Address.country as Country
+}
+
+
+@EndUserText.label: 'BUPA DCL'
+@MappingRole: true
+define role ZJAN_I_SECURE_BUPA {
+    grant 
+        select
+            on
+                ZJAN_I_SECURE_BUPA
+                    where
+                        (Country) = aspect pfcg_auth('ZBUPA', 
+                        'ZJAN_CTRY',  
+                        ACTVT = '03');
+                        
+}
+
