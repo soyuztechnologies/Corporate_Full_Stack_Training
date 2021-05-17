@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="atuhor" content="Anubhav">
+		<meta name="keywords" content="ui5 training, fiori training">
+		<meta name="description" content="this is the site for learning">
+		<title>Anubhav Trainigs</title>
+	</head>
+	<body>
+		<!--<h1>What is HTML?</h1>
+		<h2>What is HTML?</h2>-->
+		<h3>What is HTML?</h3>
+		<!--<h4>What is HTML?</h4>
+		<h5>What is HTML?</h5>
+		<h6>What is HTML?</h6>-->
+		<p>
+			HTML stands for <em><b>Hypertext Markup Language</b></em>, it is used to create static web content
+		</p>
+		<form action="https://anubhavtrainings.com" method="post">
+			<div class="credentials">
+				<div class="fieldset">
+					<label>user</label>
+					<input id="idUser" name="usr">
+				</div>
+				<div class="fieldset1">
+					<label>password</label>
+					<input id="idPassword" type="password" name="pswd">
+				</div> 
+			</div>
+		
+			<div class="Other fields">
+				<input type="color">
+				<input type="date">
+				<input type="email">
+				<input type="number" min="10" max="30">
+				<input type="submit">
+			</div>
+			
+		</form>
+		
+		<br>
+		<a href="https://www.facebook.com">
+			<img width="350px" height="200px" src="images/test1.jpg">
+		</a>
+		<br>
+		<a href="https://www.facebook.com">Click here</a>
+		<br>
+		<audio src="https://www.w3schools.com/html/horse.ogg" controls></audio>
+		<br>
+		<video src="https://www.w3schools.com/html/mov_bbb.mp4" controls></video>
+		<br>
+		
+		<table>
+			<thead>
+				<tr>
+					<th>Song Name</th>
+					<th>Artist</th>
+					<th>Rock On!</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Tu Bhoola jise</td>
+					<td>KK</td>
+					<td><audio src="" controls></audio></td>
+				</tr>
+				<tr>
+					<td>Khariyat</td>
+					<td>Arijit</td>
+					<td><audio src="" controls></audio></td>
+				</tr>
+				<tr>
+					<td>Maa Tujhe Salam</td>
+					<td>A.R. Rehman</td>
+					<td><audio src="" controls></audio></td>
+				</tr>
+			</tbody>
+		</table>
+		<iframe src="https://anubhavtrainings.com" width="50%" height="300px"></iframe>
+		
+		
+		
+	</body>
+</html>
