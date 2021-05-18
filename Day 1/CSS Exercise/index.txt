@@ -1,15 +1,20 @@
-<!DOCTYPE html>
 <html>
 	<head>
-		<link href="styles/style.css" rel="stylesheet" type="text/css">
+		<style>
+
+			
+		</style>
+		<link href="style/lifesaver.css" rel="stylesheet" type="text/css">
 	</head>
-	<body style="background-color: aqua">
+	<body style="background-image: url('images/bgimage.jpg')">
+		
 		<div class="box">
 			<div class="box-title">
 				<h3>What is HTML?</h3>
 			</div>
 			<div class="box-content">
-				<p>HTML stands for Hypertext Marku Language, it is used to create static web content.</p>
+				<p>HTML Stands for Hyper Text Markup Language, it is used to create static
+				web content.</p>
 			</div>
 		</div>
 		<div class="box">
@@ -17,7 +22,8 @@
 				<h3>What is CSS?</h3>
 			</div>
 			<div class="box-content">
-				<p>CSS stands for Cascading Style Sheet, it is used to formet the HTML content.</p>
+				<p>CSS stands for Cascading Style Sheet, it is used to format the HTML
+				content.</p>
 			</div>
 		</div>
 		<div class="box">
@@ -25,85 +31,83 @@
 				<h3>What is JS?</h3>
 			</div>
 			<div class="box-content">
-				<p>JS stadns for Java Script, it the browers programming language which browser directly
-				understands.</p>
+				<p>JS stands for Java Script, it is the browsers programming language which
+				browser directly understands.</p>
 			</div>
 		</div>
-		<div style="clear:left">
-			<div class="myImg">
-			<img src="https://image.shutterstock.com/image-photo/world-landmarks-photo-collage-isolated-260nw-663326941.jpg">
-			</div>
-			<div class="myImg">
-				<img src="https://800877.smushcdn.com/1568078/wp-content/uploads/2016/11/Taj-Mahal-Delhi-India-1024x679.jpg?lossy=1&strip=0&webp=1">
-			</div>
-			<div class="myImg">
-				<img src="https://www.usnews.com/dims4/USNEWS/965dcae/2147483647/thumbnail/640x420/quality/85/?url=http%3A%2F%2Fmedia.beam.usnews.com%2F9d%2F9b%2Fd8dc8f3747b9b147d5c0a7fa1888%2F2-angkor-wat-getty.jpg">
-			</div>
-		</div>
+		
 		<div style="clear:left"></div>
+		
+		<div class="myImg">
+			<img src="https://im.idiva.com/content/2020/Jul/Guess-Indias-North-Eastern-States-Just-By-Their-Famous-Landmarks_1_5f0c234151b94.jpg">
+		</div>
+		<div class="myImg">
+			<img src="https://cdn.getyourguide.com/img/tour/5b714ffb26966.jpeg/146.jpg">
+		</div>
+		<div class="myImg">
+			<img src="https://www.travelanddestinations.com/wp-content/uploads/2020/05/Quiz-Landmarks.jpg">
+		</div>
+		
+		<div style="clear:left"></div>
+		
 		<ul id="courses">
-			<li><a href="https://google.com">SAP UI5</a></li>
-			<li><a href="https://yahoo.com">SAP SAC</a></li>
-			<li><a href="https://facebook.com">SAP HANA</a></li>
-			<li><a href="https://youtube.com">ABAP on HANA</a></li>
+			<li><a href="https://anubhavtrainings.com/ui5-and-odata-training">SAP UI5</a></li>
+			<li><a href="https://anubhavtrainings.com/analytics-cloud-training">SAP SAC</a></li>
+			<li><a href="https://anubhavtrainings.com/aoh-and-cds-view-training">SAP HANA</a></li>
+			<li><a href="https://anubhavtrainings.com/aoh-and-cds-view-training">ABAP on HANA</a></li>
 		</ul>
-		<div style="clear:left"></div>
+		
+			<div style="clear:left"></div>
+		
 		<table>
-			<thead>
-				<tr>
-					<th>Song Name</th>
-					<th>Artist</th>
-					<th>Rock On!</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Yhe Jo des hai tera</td>
-					<td>A.R. Rahman</td>
-					<td><audio src="" controls></audio></td>
-				</tr>
-				<tr>
-					<td>Khariyat</td>
-					<td>Arijit Singh</td>
-					<td><audio src="" controls></audio></td>
-				</tr>
-				<tr>
-					<td>Nadaan Parinde</td>
-					<td>A.R. Rahman</td>
-					<td><audio src="" controls></audio></td>
-				</tr>
-				<tr>
-					<td>Kabil</td>
-					<td>Jubin Nautiyal</td>
-					<td><audio src="" controls></audio></td>
-				</tr>
-				<tr>
-					<td>Safarnama</td>
-					<td>Bhuvan Bam</td>
-					<td><audio src="" controls></audio></td>
-				</tr>
-				<tr>
-					<td>Musafirana</td>
-					<td>Arijit singh</td>
-					<td><audio src="" controls></audio></td>
-				</tr>
-			</tbody>
-		</table>
+      	<thead>
+      		<tr>
+      			<th>Song Name</th>
+      			<th>Artist</th>
+      			<th>Rock On!!</th>
+      		</tr>
+      	</thead>
+      	<tbody>
+      		<tr>
+      			<td>Tu Bhoola Jise</td>
+      			<td>KK</td>
+      			<td><audio src="" controls></audio></td>
+      		</tr>
+      		<tr>
+      			<td>Maa Tujhe Salam</td>
+      			<td>A.R. Rehman</td>
+      			<td><audio src="" controls></audio></td>
+      		</tr>
+      		<tr>
+      			<td>Beautiful</td>
+      			<td>Ed Sareen</td>
+      			<td><audio src="" controls></audio></td>
+      		</tr>
+      		<tr>
+      			<td>Titenic</td>
+      			<td>Leon</td>
+      			<td><audio src="" controls></audio></td>
+      		</tr>
+      		<tr>
+      			<td>Yo man</td>
+      			<td>Badshah</td>
+      			<td><audio src="" controls></audio></td>
+      		</tr>
+      	</tbody>
+      </table>
+		
 		
 		<ul>
 			<li>Apple</li>
-			<li>Google</li>
-			<li>Microsoft</li>
+			<li>Banana</li>
+			<li>Cherry</li>
 		</ul>
 		
-		<div style="clear:left">
-			<h3>Personal Details</h3>
-			<label>Name</label>
-			<input>
-			<br>
-			<label>Age</label>
-			<input>
-		</div>
-		
+		<h3>Personal details</h3>
+		<label>Name</label>
+		<input>
+		<br>
+		<label>age</label>
+		<input>
 	</body>
 </html>

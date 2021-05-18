@@ -1,9 +1,10 @@
-function myFirstFunction(){
-	alert('Welcom to internal js');
+function myFirstDemoFunction(){
+	alert('welcome to inline js');
 }
-function secondFun(){
+function mySecondFunction(){
+	//Obtaining the object of our input field from DOM
 	var oInp = document.getElementById("num");
-	var	emp = {"empId0":100};
+	var emp = {"empid":100};
 	emp.salary = 9000;
 	console.log(emp);
 	var empStr = JSON.stringify(emp);
@@ -17,79 +18,72 @@ function secondFun(){
 function onLogin(){
 	var oInpUsr = document.getElementById("usr");
 	var valUser = oInpUsr.value;
-	var valPwd =  document.getElementById("pswd").value;
-	if(valUser === "Shekhar" && valPwd === "Vedi"){
-		///Login Success
-		document.write("<h1>Login was Successful!! <em style='color:red'>Roger</em></h1>");
+	var valPwd = document.getElementById("pwd").value; //chaining example
+	if(valUser === "Anubhav" && valPwd === "Anubhav"){
+		///Login successs
+		//debugger;
+		document.write("<h1>Login was a Success!! <em style='color:red'>Roger</em></h1>");
 	}else{
-		///login Failed
-		document.getElementById("msg").innerText = "Your login was abandoned due to wrong CRED";
-		blinkYourEyes();
+		///logon failed
+		//alert("login failed");
+		document.getElementById("msg").innerText = "Your login was abandoned due invalid CRED";
 	}
 }
 function onMagic(){
-	
-	//$(".box-title").css("background-color", "brown").css("color", "white");
-	//$("input").css("background-color", "black").css("color", "aqua").css("font-family", "cursive");
+	//step 1: get all the elements with class name box-title ---> array 
 	var aBoxTitle = document.getElementsByClassName("box-title");
-	for (var i=0; i<aBoxTitle.length; i++){
+	//step 2: loop over the array elements (ui) --> inside each loop pass, we will process
+	for(var i=0; i<aBoxTitle.length; i++){
+		//Step 3: each loop pass, we get access to individual elements one by one
 		var oTitleElement = aBoxTitle[i];
-		oTitleElement.style.backgroundColor = "black";			
+		oTitleElement.style.backgroundColor = "black";
+		oTitleElement.style.color = "white";
 	}
+	
 }
 function loadJson(){
-	return {
-			"empTab": [{
-					"empId": 100,
-					"empName": "Shekahr",
-					"salary": 5000
-				},
-				{
-					"empId": 100,
-					"empName": "Nishan",
-					"salary": 6000
-				},
-				{
-					"empId": 100,
-					"empName": "Shubham",
-					"salary": 6500
-				},
-				{
-					"empId": 100,
-					"empName": "Kuldeep",
-					"salary": 5600
+	var x = {
+				"empTab": [{
+						"empId": 100,
+						"empName": "Anubhav",
+						"salary": 5000
+					},
+					{
+						"empId": 200,
+						"empName": "Riyaz",
+						"salary": 6800
+					},
+					{
+						"empId": 300,
+						"empName": "Max",
+						"salary": 9000
+					},
+					{
+						"empId": 400,
+						"empName": "Stefeny",
+						"salary": 14000
+					}
+				],
+				"empStr": {
+					"empId": 999,
+					"empName": "Mario",
+					"salary": 1470
 				}
-			],
-			"empStr": {
-				"empId": 999,
-				"empName": "Shekahr",
-				"salary": 5000
-			}
-		};
+			};
+	return x;
 }
-function onJsonLoop(){
+function onJSONLoop(){
 	var sample = loadJson();
 	var aEmpTab = sample.empTab;
-	for(var i=0; i<aEmpTab.length; i++){
+	for(var i=0;i<aEmpTab.length;i++){
 		console.log(aEmpTab[i].empName);
 	}
 }
-function salaryInc(){
-	var sample = loadJson();
-	var aEmpTab = sample.empTab;
-	for(var i=0; i<aEmpTab.length; i++){
-		console.log(aEmpTab[i].empName + '-' + (aEmpTab[i].salary + aEmpTab[i].salary*0.1));
-	}	
-}
-function onDraw(countryVal){
-		var oNewElement = document.createElement("h4");
-		if(countryVal) {
-			var oText = document.createTextNode(countryVal);
-		}else {
-			oText = document.createTextNode(document.getElementById("got").value);
-		}
-		oNewElement.appendChild(oText);
-		
-		var oCanvas = document.getElementById("canvas");
-		oCanvas.appendChild(oNewElement);
+function onDraw(){
+	var oNewElement = document.createElement("h4");
+	var oText = document.createTextNode(document.getElementById("got").value);
+	oNewElement.appendChild(oText);
+	
+	var oCanvas = document.getElementById("canvas");
+	oCanvas.appendChild(oNewElement);
 }
