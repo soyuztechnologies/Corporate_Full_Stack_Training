@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<link href="styles/style.css" rel="stylesheet" type="text/css">
+		<script src="reuse.js"></script>
+		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.js"></script>
+	</head>
+	<body>	
+		<div class="box">
+			<div class="box-title">
+				<h3>What is HTML?</h3>
+			</div>
+			<div class="box-content">
+				<p>HTML stands for Hypertext Marku Language, it is used to create static web content.</p>
+			</div>
+		</div>
+		<div class="box">
+			<div class="box-title">
+				<h3>What is CSS?</h3>
+			</div>
+			<div class="box-content">
+				<p>CSS stands for Cascading Style Sheet, it is used to formet the HTML content.</p>
+			</div>
+		</div>
+		<div class="box">
+			<div class="box-title">
+				<h3>What is JS?</h3>
+			</div>
+			<div class="box-content">
+				<p>JS stadns for Java Script, it the browers programming language which browser directly
+				understands.</p>
+			</div>
+		</div>
+		<div style="clear:left"></div>
+		<button onclick="onMagic()">Its Magic</button>
+		<lable>Username</lable>
+		<input id="usr">
+		<br>
+		<label>Password</label>
+		<input id="pswd">
+		<label id="msg"></label>
+		<button onclick="onLogin()">Login</button>
+		<br>
+		<button onclick="onAppear()">Hide</button>
+		<button onclick="onDisapear()">Show</button>
+		<br>
+		
+		<button onclick="onJsonLoop()">JSON</button>
+		<button onclick="salaryInc()">Increment</button>
+		<button onclick="Zumba()">Animate</button>
+		<button onclick="getAllCountries()">List Country</button>
+		<br>
+		<img id="monalisa" onmouseover="enlargeImg()" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/1200px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg">
+		<input id="got">
+		<button onclick="onDraw()">Draw</button>
+		
+		<div id="canvas"></div>
+		<br>
+		
+		<button onclick="alert('welcom to inline js')">Click ME</button>
+		<button onclick="alert('welcom to inline js')">Click Me2</button>
+		<input id="num" type="number">
+		<button onclick="myFirstFunction()">Click ME1</button>
+		<button onclick="secondFun()">Click Me12</button>
+	</body>
+</html>
