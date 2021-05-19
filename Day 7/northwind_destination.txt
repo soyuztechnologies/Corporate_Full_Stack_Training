@@ -1,0 +1,10 @@
+Description=Northwind
+Type=HTTPS
+TrustAll=true
+Authentication=NoAuthentication
+Name=NW
+ProxyType=Internet
+URL=https://services.odata.org/
+WebIDEUsage=odata_abap,odata_gen,ui5_execute_abap,dev_abap
+WebIDESystem=NW
+WebIDEEnabled=true
