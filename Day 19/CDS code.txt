@@ -1,0 +1,38 @@
+@AbapCatalog.sqlViewName: 'ZJANSALESSAC'
+@AbapCatalog.compiler.compareFilter: true
+@AbapCatalog.preserveKey: true
+@AccessControl.authorizationCheck: #CHECK
+@EndUserText.label: 'sac Consumption view'
+@VDM.viewType: #CONSUMPTION
+@Analytics.dataCategory: #CUBE
+@Analytics.dataExtraction.enabled: true
+@OData.publish: true
+define view ZJAN_C_SALES_SAC as select from SEPM_I_SalesOrderItem_E {
+    //SEPM_I_SalesOrderItem_E
+    key SalesOrder as OrderId,
+    key SalesOrderItem as ItemId,
+    _SalesOrder._Customer.CompanyName as CompanyName,
+    Product,
+    @Semantics.currencyCode: true
+    TransactionCurrency,
+    @DefaultAggregation: #SUM
+    @Semantics.amount.currencyCode: 'TransactionCurrency'
+    GrossAmountInTransacCurrency as GrossAmount,
+    @DefaultAggregation: #SUM
+    @Semantics.amount.currencyCode: 'TransactionCurrency'
+    NetAmountInTransactionCurrency as NetAmount,
+    @DefaultAggregation: #SUM
+    @Semantics.amount.currencyCode: 'TransactionCurrency'
+    TaxAmountInTransactionCurrency as TaxAmount,
+    @DefaultAggregation: #SUM
+    @Semantics.amount.currencyCode: 'TransactionCurrency'
+    currency_conversion( amount => GrossAmountInTransacCurrency, 
+    source_currency => TransactionCurrency, 
+    target_currency => cast('EUR' as abap.cuky), 
+    exchange_rate_date => cast('20210123' as abap.dats) )
+    as ConvertedAmount,
+    ProductAvailabilityStatus as Status,
+    _Product._Text.ProductDescription as ProductName    
+}
+
+

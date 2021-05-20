@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="author" content="Anubhav">
+      <meta name="keywords" content="ui5 training, fiori training, fishing">
+      <meta name="description" content="this is the site for learning basics">
+      <title>Anubhav Trainings</title>
+   </head>
+   <body>
+      <!--<h1>What is HTML?</h1>
+         <h2>What is HTML?</h2>-->
+      <!--<h4>What is HTML?</h4>
+         <h5>What is HTML?</h5>
+         <h6>What is HTML?</h6>-->
+      <h3>What is HTML?</h3>
+      <p>HTML stands for 
+         <em><b>	HyperText Markup Language
+         </b></em>, it is used to create static web content
+      </p>
+      <form action="https://anubhavtrainings.com" method="post">
+         <div class="credentials">
+            <div class="fieldset">
+               <label>user</label>
+               <input id="idUser" name="usr">	
+            </div>
+            <div class="fieldset">
+               <label>password</label>
+               <input id="idPassword" type="password" name="pwd">	
+            </div>
+         </div>
+         <div class="otherfields">
+            <input type="color">
+            <input type="date">
+            <input type="email">
+            <input type="number" min="20" max="25">
+            <input type="submit">
+         </div>
+      </form>
+      <br>
+      <a href="https://anubhavtrainings.com">Click here</a>
+      <br>
+      <a href="https://anubhavtrainings.com/ui5-and-odata-training">
+      <img width="200px" height="200px" src="images/anubhavtrainings.png">
+      </a>
+      <audio src="https://pwdown.com/12515/Vande%20Matram%20-%20AR%20Rehman%20320Kbps.mp3" controls></audio>
+      <audio src="https://www.w3schools.com/html/horse.ogg" controls></audio>
+      <video src="https://www.w3schools.com/html/mov_bbb.mp4" controls></video>
+      
+      <table>
+      	<thead>
+      		<tr>
+      			<th>Song Name</th>
+      			<th>Artist</th>
+      			<th>Rock On!!</th>
+      		</tr>
+      	</thead>
+      	<tbody>
+      		<tr>
+      			<td>Tu Bhoola Jise</td>
+      			<td>KK</td>
+      			<td><audio src="" controls></audio></td>
+      		</tr>
+      		<tr>
+      			<td>Maa Tujhe Salam</td>
+      			<td>A.R. Rehman</td>
+      			<td><audio src="" controls></audio></td>
+      		</tr>
+      		<tr>
+      			<td>Beautiful</td>
+      			<td>Ed Sareen</td>
+      			<td><audio src="" controls></audio></td>
+      		</tr>
+      	</tbody>
+      </table>
+      
+      <!--iframe tag used for integrating DOM from somewhere else-->
+      <iframe src="https://anubhavtrainings.com" width="100%" height="600px"></iframe>
+      <iframe width="853" height="480" src="https://www.youtube.com/embed/kDCtpRtFY7s" 
+      allowfullscreen></iframe>
+      <ul>
+         <li>Apple</li>
+         <li>Banana</li>
+         <li>Cherry</li>
+         <li>Gormet</li>
+      </ul>
+      <ol>
+         <li>Webdynpro</li>
+         <li>ABAP on HANA</li>
+         <li>UI5 and Fiori</li>
+         <li>Analytics Cloud</li>
+      </ol>
+   </body>
+</html>
