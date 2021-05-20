@@ -6,7 +6,7 @@ sap.ui.define([
 
 ], function (Control, RatingIndicator, Label, Button) {
 	"use strict";
-	return Control.extend("rtl.control.ProductRating", {
+	return Control.extend("emc.control.ProductRating", {
 		metadata : {
 			properties : {
 				value: 	{type : "float", defaultValue : 0}
