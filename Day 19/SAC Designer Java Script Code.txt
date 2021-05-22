@@ -1,0 +1,113 @@
+1. Change the chart measure and table (Account Dimension) to Revenue and Gross Margin
+(Make sure you create script variable PreviousSelection)
+
+console.log("Welcome to my Dropdown Current Value is : " + Spiderman.getSelectedKey());
+console.log("Previous Value was : " + PreviousSelection);
+var superman = Spiderman.getSelectedKey();
+
+//Chart Changes
+if(superman === "Revenue"){
+	RightChart.addMeasure("[Account].[parentId].&[Sales_Revenue]", Feed.ValueAxis);
+	RightChart.addMeasure("[Account].[parentId].&[Quantity_sold]", Feed.ValueAxis);	
+}else{
+	RightChart.addMeasure("[Account].[parentId].&[Discount]", Feed.ValueAxis);
+	RightChart.addMeasure("[Account].[parentId].&[Gross_Margin]", Feed.ValueAxis);
+}
+
+if(PreviousSelection === "Revenue"){
+	RightChart.removeMeasure("[Account].[parentId].&[Sales_Revenue]",Feed.ValueAxis);
+	RightChart.removeMeasure("[Account].[parentId].&[Quantity_sold]", Feed.ValueAxis);	
+}else{
+	RightChart.removeMeasure("[Account].[parentId].&[Discount]", Feed.ValueAxis);
+	RightChart.removeMeasure("[Account].[parentId].&[Gross_Margin]", Feed.ValueAxis);
+}
+
+//Table Changes
+if(superman === "Revenue"){
+	MyTable.getDataSource().setDimensionFilter("Account",["[Account].[parentId].&[Sales_Revenue]","[Account].[parentId].&[Quantity_sold]"]);
+}else{
+	MyTable.getDataSource().setDimensionFilter("Account",["[Account].[parentId].&[Gross_Margin]","[Account].[parentId].&[Discount]"]);
+}
+
+PreviousSelection = superman;
+
+2. Change Dimensions dynamically
+(Make sure you create a Script variable for PreviousDimension)
+
+var sel = Dimension.getSelectedKey();
+
+MyTable.removeDimension(PreviousDimension);
+MyTable.addDimensionToRows(sel);
+
+RightChart.removeDimension(PreviousDimension, Feed.CategoryAxis);
+RightChart.addDimension(sel, Feed.CategoryAxis);
+
+//RightChart.addDimension("Date",Feed.CategoryAxis);
+
+
+PreviousDimension = sel;
+
+3. Show Hide Controls Dynamically
+
+var allSelected = CheckboxGroup_1.getSelectedKeys();
+RightChart.setVisible(false);
+DrStrange.setVisible(false);
+MyTable.setVisible(false);
+for(var i=0;i<allSelected.length;i++){
+	if(allSelected[i] === "MyTable"){
+		MyTable.setVisible(true);
+	}else if(allSelected[i] === "RightChart"){
+		RightChart.setVisible(true);
+	}else if(allSelected[i] === "DrStrange"){
+		DrStrange.setVisible(true);
+	}
+}
+
+4. Change CSS Color Based on Radio Buttons
+
+var sel = RadioButtonGroup_1.getSelectedKey();
+
+if(sel === "Default"){
+	Title.setStyle({
+		backgroundColor: "white",
+		color: "blue"
+	});
+}else{
+	Title.setStyle({
+		backgroundColor: "black",
+		color: "white"
+	});
+}
+
+5. Copy Dimension Filter from Table to other charts
+
+RightChart.getDataSource().copyDimensionFilterFrom(MyTable.getDataSource());
+DrStrange.getDataSource().copyDimensionFilterFrom(MyTable.getDataSource());
+//	RightChart.getDataSource().copyDimensionFilterFrom(MyTable.getDataSource(),"City");
+//	DrStrange.getDataSource().copyDimensionFilterFrom(MyTable.getDataSource(), "City");
+
+6. Popup
+
+//	Popup_Chart.getDataSource().copyDimensionFilterFrom(MyTable.getDataSource(),"City");
+//	Popup_Chart.getDataSource().copyDimensionFilterFrom(MyTable.getDataSource(),"Manager");
+Popup_1.open();
+
+Popup_1.close();
+
+7. Auto populating hierarchy
+
+//RightChart.addDimension("Date",Feed.CategoryAxis);
+//New code to auto populate dropdown 3 based on selection
+//of Dimension in Dropdown 2, if the dimension has hieararchy
+var hierarchies = MyTable.getDataSource().getHierarchies(sel);
+console.log(hierarchies);
+Dropdown_3.removeAllItems();
+for(var i=0; i< hierarchies.length;i++){
+	Dropdown_3.addItem(hierarchies[i].id, hierarchies[i].description);
+}
+
+Dropdown 3 to change hierarchy
+
+var selection = Dropdown_3.getSelectedKey();
+MyTable.getDataSource().setHierarchy(PreviousDimension, selection);
+RightChart.getDataSource().setHierarchy(PreviousDimension, selection);
