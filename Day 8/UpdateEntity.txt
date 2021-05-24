@@ -1,6 +1,7 @@
-  method PRODUCTSET_UPDATE_ENTITY.
+  METHOD productset_update_entity.
 
-data: ls_entity TYPE ZCL_Z_FIRST_MPC=>TS_PRODUCT,
+
+   data: ls_entity TYPE zcl_z_first_mpc=>TS_PRODUCT,
           lv_prod_id type bapi_epm_product_id,
           ls_header TYPE bapi_epm_product_header,
           lt_return type TABLE OF bapiret2,
@@ -44,4 +45,5 @@ data: ls_entity TYPE ZCL_Z_FIRST_MPC=>TS_PRODUCT,
 
     MOVE-CORRESPONDING ls_entity to er_entity.
 *    update dbtable set p = val p = vl where pk = key
-  endmethod.
+
+  ENDMETHOD.
