@@ -104,7 +104,7 @@ function onAppear(){
 		alert("yes dude, they are all hidden");
 	});
 }
-function onDisapear(){
+function onDisappear(){
 	$(".box").fadeIn(5000);
 }
 function blinkYourEyes(){
