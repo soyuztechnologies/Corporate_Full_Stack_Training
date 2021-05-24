@@ -67,7 +67,7 @@ function loadJson(){
 			}
 		};
 }
-function onJsonLoop(){
+function onJSONLoop(){
 	var sample = loadJson();
 	var aEmpTab = sample.empTab;
 	for(var i=0; i<aEmpTab.length; i++){
