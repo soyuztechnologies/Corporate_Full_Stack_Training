@@ -1,6 +1,6 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core"
         xmlns:f="sap.ui.layout.form" xmlns="sap.m" xmlns:t="sap.ui.table" controllerName="mickey.controller.MyXML">
-        <t:Table id="myTable" selectionMode="Single" visibleRowCount="3" rowSelectionChange="onRowSelect">
+        <t:Table id="myTable" selectionMode="Single"  rows="{/empTab}"  visibleRowCount="3" rowSelectionChange="onRowSelect">
             <t:columns>
                 <t:Column>
                     <t:label>
