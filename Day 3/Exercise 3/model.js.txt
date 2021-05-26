@@ -1,0 +1,28 @@
+sap.ui.define([
+    'sap/ui/model/json/JSONModel',
+    'sap/ui/model/resource/ResourceModel'
+], function(JSONModel,ResourceModel) {
+    'use strict';
+    
+    return {
+        createJSONModel: function(sFilePath) {
+            //Step 1: Create brand new model object
+            var oModel = new JSONModel();
+            //Step 2: Set Data
+            //oModel.setData( );
+            oModel.loadData(sFilePath);
+            return oModel;
+        },
+        createXMLModel: function() {
+            return "";
+        },
+        createResourceModel: function() {
+               var oResourceModel = new ResourceModel({
+                bundleUrl: 'i18n/i18n.properties'
+            });
+            return oResourceModel;
+        }
+    };
+
+
+});
