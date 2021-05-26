@@ -1,4 +1,4 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core"
+<mvc:View xmlns:layout="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core"
         xmlns:f="sap.ui.layout.form" xmlns="sap.m" xmlns:t="sap.ui.table" controllerName="mickey.controller.MyXML">
         <t:Table id="myTable" selectionMode="Single" visibleRowCount="3" rowSelectionChange="onRowSelect">
             <t:columns>
@@ -15,7 +15,7 @@
                         <Text text="{i18n>XTIT_EMPNAME}" />
                     </t:label>
                     <t:template>
-                        <Text text="{path : 'empName'}" />
+                        <Text text="{path : 'empName', formatter: '.formatter.convertName'}" />
                     </t:template>
                 </t:Column>
                 <t:Column>
@@ -23,7 +23,11 @@
                         <Text text="{i18n>XTIT_SALARY}" />
                     </t:label>
                     <t:template>
-                        <Text text="{salary} {currency}" />
+                        <Text text="{
+                                        parts: [{ path : 'salary' },
+                                                { path : 'currency' }],
+                                        formatter: '.formatter.joinCurrency'
+                        }" />
                     </t:template>
                 </t:Column>
                 <t:Column>
@@ -76,7 +80,7 @@
                 <Label text="{i18n>XTIT_EMPNO}"/>
                 <Input id="idEmpID" value="{empId}"  width="200px" maxLength="5"/>
                 <Label text="{i18n>XTIT_EMPNAME}"/>
-                <Input id="idEmpName" value="{path : 'empName'}"  width="400px"/>
+                <Input id="idEmpName" value="{path : 'empName', formatter: '.formatter.convertName'}"  width="400px"/>
                 <Label text="{i18n>XTIT_SALARY}"/>
                 <Input id="idEmpSal" value="{salary}"
                        enabled="{= ${/empStr/empName} === 'Anubhav' ? false : true }" width="180px"/>
@@ -89,5 +93,4 @@
         <Button id="MyButton" text="{i18n>XBUT_CLICK}" press="clickMe"/>
         <Button id="grayOut" text="{i18n>XBUT_MAGIC}" press="onMagic" />
         <Button id="idFlip" text="{i18n>XBUT_FLIP}" press="onFlip" />
-        
 </mvc:View>

@@ -1,0 +1,57 @@
+{
+    "empStr": {
+        "empId": "0001",
+        "empName": "Roger",
+        "salary": 8000,
+        "currency": "USD",
+        "mario": true
+    },
+    "empTab": [
+        {
+            "empId": "100",
+            "empName": "Steve",
+            "salary": 5800,
+            "currency": "USD",
+            "smoker": false,
+            "picUrl": "https://icons-for-free.com/iconfiles/png/512/business+costume+male+man+office+user+icon-1320196264882354682.png",
+            "mStat": "M",
+            "rating": 3
+        },{
+            "empId": "101",
+            "empName": "Mike",
+            "salary": 5850,
+            "currency": "EUR",
+            "smoker": false,
+            "picUrl": "https://icons-for-free.com/iconfiles/png/512/business+costume+male+man+office+user+icon-1320196264882354682.png",
+            "mStat": "M",
+            "rating": 5
+        },{
+            "empId": "102",
+            "empName": "Rebbecca",
+            "salary": 9850,
+            "currency": "EUR",
+            "smoker": true,
+            "picUrl": "https://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/user-female-icon.png",
+            "mStat": "M",
+            "rating": 1
+        },{
+            "empId": "103",
+            "empName": "Bilal",
+            "salary": 5560,
+            "currency": "AED",
+            "smoker": false,
+            "picUrl": "https://icons-for-free.com/iconfiles/png/512/business+costume+male+man+office+user+icon-1320196264882354682.png",
+            "mStat": "S",
+            "rating": 2
+        },{
+            "empId": "104",
+            "empName": "Srinivas",
+            "salary": 5700,
+            "currency": "INR",
+            "smoker": true,
+            "picUrl": "https://icons-for-free.com/iconfiles/png/512/business+costume+male+man+office+user+icon-1320196264882354682.png",
+            "mStat": "S",
+            "rating": 4
+        }
+    ]
+}
