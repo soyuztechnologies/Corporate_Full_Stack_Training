@@ -43,7 +43,7 @@
 		},
 		"resources": {
 			"css": [{
-				"uri": "css/style.css",
+				"uri": "css/mystyle.css",
 				"id": ""
 			}]
         },
@@ -108,7 +108,7 @@
             },
             "":{
                 "type": "sap.ui.model.json.JSONModel",
-                "uri": "models/fruitdata.json"
+                "uri": "models/fruitsdata.json"
             }
         }
 	}
