@@ -14,7 +14,7 @@
     lv_total = lv_top + lv_skip.
     ls_row-bapimaxrow = lv_total.
 
-    read TABLE IT_FILTER_SELECT_OPTIONS INTO data(ls_Sel_option) with key property = 'CATEGORY'  .
+    read TABLE IT_FILTER_SELECT_OPTIONS INTO data(ls_Sel_option) with key property = 'Category'  .
 
     LOOP AT ls_Sel_option-select_options INTO data(ls_filters).
 
