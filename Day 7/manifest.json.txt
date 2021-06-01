@@ -19,7 +19,7 @@
 		},
         "dataSources": {
             "anubhavService":{
-                "uri": "/sap/opu/odata/sap/Z_FIRST_SRV/",
+                "uri": "/sap/opu/odata/sap/Z_FIRST_XX_SRV/",
                 "type": "OData",
                 "settings": {
                     "odataVersion": "2.0"
