@@ -9,11 +9,7 @@
             <SearchField id="idSearch" search="onSearch" liveChange="onSearch"></SearchField>
             <List id="idList" mode="SingleSelectMaster" selectionChange="onSelectionChange" delete="onDelete" 
             items="{path: '/ProductSet'}" growing="true" growingThreshold="10">
-            <!-- ,
-                sorter: {
-                    path : 'type',
-                    group: true
-                } -->
+            
                 <headerToolbar>
                     <Toolbar> 
                         <ToolbarSpacer></ToolbarSpacer>
