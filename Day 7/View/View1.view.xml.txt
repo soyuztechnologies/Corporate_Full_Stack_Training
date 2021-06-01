@@ -22,39 +22,17 @@
                     </Toolbar>
                 </headerToolbar>
                 <items>
-                    <ObjectListItem intro="{CATEGORY}" title="{NAME}" icon="" 
-                                    number="{PRICE}" numberUnit="{CURRENCY_CODE}">
+                   <ObjectListItem intro="{Name}" title="{ProductId}" icon="{imageURL}" 
+
+                                    number="{Price}" numberUnit="{CurrencyCode}">
+
                         <firstStatus>
-                            <ObjectStatus text="{SUPPLIER_NAME}" state="Success"></ObjectStatus>
+
+                            <ObjectStatus text="{SupplierId}"></ObjectStatus>
+
                         </firstStatus>
+
                     </ObjectListItem>
-                    <!-- <DisplayListItem value="Best antibiotic by mother earth" label="Apple"></DisplayListItem>
-                    <StandardListItem description="Source of potasium, restore lactic acid" 
-                    title="Banana" icon="sap-icon://product"></StandardListItem>
-                    <InputListItem>
-                        <HBox>
-                            <Text text="Why Pineapple?" />
-                            <Input />
-                        </HBox>
-                    </InputListItem>
-                    <CustomListItem>
-                        <Text text="Do you want CoD" />
-                        <Switch />
-                    </CustomListItem>
-                    <ObjectListItem title="50000032" intro="Sales order for IBM"
-                                    number="5800" numberUnit="EUR" icon="sap-icon://home">
-                        <firstStatus>
-                            <ObjectStatus text="Approved" state="Success"></ObjectStatus>
-                        </firstStatus>
-                        <attributes>
-                            <ObjectAttribute title="Sold To Party" text="1413"></ObjectAttribute>
-                            <ObjectAttribute title="Ship To Party" text="1510"></ObjectAttribute>
-                        </attributes>
-                    </ObjectListItem>
-                    <FeedListItem text="Hey Anubhav! Wats up" sender="Jeo Biden" icon="https://www.marketplace.org/wp-content/uploads/2020/11/Joe-Biden.jpg?w=600"
-                                  timestamp="Jan 3rd 2021"  
-                    ></FeedListItem>
-                    <ActionListItem text="Order Now!!!" press="onOrder"></ActionListItem> -->
                 </items>
             </List>
         </content>
