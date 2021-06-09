@@ -119,7 +119,7 @@ Base.node_key = SalesOrders.buyer_guid {
 }
 
 
-
+//extend functionality
 extend view entity ZMAR_CDS_BASE with {
     snwd_bpa.email_address,
     snwd_bpa.fax_number,
