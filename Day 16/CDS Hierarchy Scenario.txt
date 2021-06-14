@@ -60,7 +60,7 @@ endloop.
 
 
 
-==========================================================================
+===============================Classical Hierarchy===========================================
 
 @AbapCatalog.sqlViewName: 'ZATSPEMPLOYEE'
 @AbapCatalog.compiler.compareFilter: true
