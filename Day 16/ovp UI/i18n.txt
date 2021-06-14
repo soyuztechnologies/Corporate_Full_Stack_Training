@@ -1,0 +1,11 @@
+#XFLD: 
+card00_title=Overall Errors
+ 
+#XFLD: 
+card00_subTitle=anubhavtrainings.com
+ 
+#XFLD: 
+card01_title=Error %
+ 
+#XFLD: 
+card01_subTitle=Anubhav Trainings

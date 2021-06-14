@@ -82,30 +82,23 @@ _Employee.EmployeeName
 @OData.publish: true
 define view ZATS_C_EMPHOURS as select from ZATS_CO_EMPHOURS {
     //ZATS_CO_EMPHOURS
-    @AnalyticsDetails.query:{
-        displayHierarchy: #ON,
-        hierarchyInitialLevel: 2,
-        axis: #ROWS,
-        totals: #HIDE,
-        display: #KEY_TEXT
+    @AnalyticsDetails.query: {
+    axis: #ROWS,
+    displayHierarchy: #ON,
+     hierarchyInitialLevel: 2,
+    totals: #HIDE,
+    display: #KEY_TEXT
     }
+    @UI.lineItem: [{position: 10 }]
     key empid,
     planned,
     recorded,
-    CostCenter,
     @EndUserText.label: 'Employee Name'
     EmployeeName,
-    @AnalyticsDetails.query.formula: 'recorded * 100 / planned'
+    @UI.lineItem: [{position: 30 }]
+    CostCenter,
+    @AnalyticsDetails.query.formula: 'planned * 100 / recorded'
     @EndUserText.label: 'Effort Utilization'
-    0 as EffortUtilization
+     @UI.lineItem: [{position: 20 }]
+    0 as EffortUtilizating
 }
-
-
-
-
-
-
-
-
-
-

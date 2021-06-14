@@ -1,0 +1,37 @@
+"card00": {
+				"model": "mainService",
+				"template": "sap.ovp.cards.list",
+				"settings": {
+					"title": "{{card00_title}}",
+					"sortBy": "TotalErros",
+					"sortOrder": "descending",
+					"subTitle": "{{card00_subTitle}}",
+					"listFlavor": "bar",
+					"entitySet": "ZAPR_C_IDOC_DASHBOARD",
+					"addODataSelect": false
+				}
+		},
+		"card01": {
+				"model": "mainService",
+				"template": "sap.ovp.cards.charts.analytical",
+				"settings": {
+					"title": "{{card01_title}}",
+					"subTitle": "{{card01_subTitle}}",
+					"entitySet": "ZAPR_C_IDOC_DASHBOARD",
+					"navigation": "dataPointNav",
+					"chartAnnotationPath" : "com.sap.vocabularies.UI.v1.Chart#modi",
+					"idenfiticationAnnotationPath" : "com.sap.vocabularies.UI.v1.Identification"
+				}
+		},
+		"card02": {
+				"model": "mainService",
+				"template": "sap.ovp.cards.charts.analytical",
+				"settings": {
+					"title": "{{card01_title}}",
+					"subTitle": "{{card01_subTitle}}",
+					"entitySet": "ZAPR_C_IDOC_DASHBOARD",
+					"navigation": "dataPointNav",
+					"chartAnnotationPath" : "com.sap.vocabularies.UI.v1.Chart#putin",
+					"idenfiticationAnnotationPath" : "com.sap.vocabularies.UI.v1.Identification"
+				}
+        }
